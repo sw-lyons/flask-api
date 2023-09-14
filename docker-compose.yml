@@ -1,0 +1,11 @@
+services:
+  py-dev:
+    container_name: dwch-py-dev
+    build: .
+    command: python ./app.py
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_DEBUG=true
+    volumes:
+      - ./src:/code
